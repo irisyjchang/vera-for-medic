@@ -1,9 +1,13 @@
 # Vera for Medic
 
-Standalone UI demo hosted on GitHub Pages. Generation is simulated; no backend or AI connection.
+Public entry point: https://irisyjchang.github.io/vera-for-medic/
 
-Original source: https://github.com/NirmalKumarMari/medic-no-code-cht/tree/f0a01aea9a2735793fcba587a6fe4ef7599df038/mvp-prototype
+This GitHub Pages entry forwards visitors to the existing AWS-backed combined Vera preview:
+https://d3kk07plry56g2.cloudfront.net/vera-preview/
 
-Licensed under AGPL-3.0 (see LICENSE). Complete prototype source is included in source.zip.
+Combined application source:
+https://github.com/NirmalKumarMari/medic-no-code-cht/tree/ui/vera-combined
 
-To rebuild: unzip source.zip, run npm ci and npm run build inside the source directory; publish dist with asset paths relative to the GitHub Pages project path.
+GitHub Pages cannot run the Node API or AWS pipeline; the app and API stay together on their existing HTTPS origin. This repository does not redeploy or modify that AWS backend. The forwarding entry preserves query parameters and the existing QR-code URL.
+
+The older static demo bundles and source.zip are retained as historical demo assets; they are not the current combined app. Their original source is main at f0a01aea9a2735793fcba587a6fe4ef7599df038. Original AGPL-3.0 license is preserved in LICENSE.
